@@ -1,0 +1,53 @@
+.hertxt { 
+  text-align: justify;
+  hyphens: auto;
+  font: 11px/14px Arial;
+  margin-bottom: 10px;
+  position: relative;
+} 
+
+.HERICO {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatey(0px);
+  position: absolute;
+      top: -20px;
+}
+
+.HERICO i{
+    font-size: 25px;
+    color: #dd9a3c;
+  
+}
+
+.hertxt {
+    width: 80%;
+    line-height: 12px;
+    font-size: 9px;
+    font-family: Times New Roman;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hertxt::after{
+    content: "";
+    height: 1px;
+    width: auto;
+    flex: 1;
+    margin-left: 10px;
+    background-color: #dd9a3c;
+}
+
+.hertxt::before{
+    content: "";
+    height: 1px;
+    width: auto;
+    flex: 1;
+    margin-right: 10px;
+    background-color: #dd9a3c;
+}
