@@ -12,12 +12,12 @@
     align-items: center;
     transform: translatey(0px);
   position: absolute;
-      top: -20px;
+      top: -25px;
 }
 
 .HERICO i{
     font-size: 25px;
-    color: #dd9a3c;
+    color: #dd9a3c!important;
   
 }
 
