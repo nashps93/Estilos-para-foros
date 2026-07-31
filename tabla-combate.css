@@ -231,7 +231,8 @@
   align-content: center;
   font: 12px/12px 'Arial';
   font-style: italic;
-  color: var(--acento)
+  color: var(--acento);
+  text-align: center;
 }
 
 .ENE i{
