@@ -6,7 +6,6 @@
 
 .base {--acento: var(--base);}
 
-
 .sts-base strong{
   color: var(--acento);}
 
