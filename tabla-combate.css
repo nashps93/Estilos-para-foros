@@ -62,6 +62,7 @@
   margin: -10px 0 3px 0;
   color: var(--acento);
   text-shadow: var(--shadow);
+  text-align: center;
 }
 
 .PDR:before{
@@ -71,6 +72,7 @@
   margin: -10px 0 3px 0;
   color: var(--acento);
   text-shadow: var(--shadow);
+  text-align: center;
 }
 
 .RES:before{
@@ -80,6 +82,7 @@
   margin: -10px 0 3px 0;
   color: var(--acento);
   text-shadow: var(--shadow);
+  text-align: center;
 }
 
 .DES:before{
@@ -89,6 +92,7 @@
   margin: -10px 0 3px 0;
   color: var(--acento);
   text-shadow: var(--shadow);
+  text-align: center;
 }
 
 .SAB:before{
@@ -98,6 +102,7 @@
   margin: -10px 0 3px 0;
   color: var(--acento);
   text-shadow: var(--shadow);
+  text-align: center;
 }
 
 .CON:before{
@@ -107,6 +112,7 @@
   margin: -10px 0 3px 0;
   color: var(--acento);
   text-shadow: var(--shadow);
+  text-align: center;
 }
 
 .stats-habis{
@@ -174,6 +180,7 @@
   align-content: center;
   border-left: 1px solid #000;
   text-shadow: var(--shadow);
+  text-align: center;
 }
 
 .sts-dado i{
