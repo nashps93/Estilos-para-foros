@@ -100,11 +100,12 @@
 .uw-top {
   position: absolute;
   z-index: 3;
-  top: 17px;
-  right: 18px;
+  top: 70px;
+  right: -120px;
   font: 400 7px Arial, sans-serif;
   letter-spacing: 2px;
   color: rgba(255,255,255,.72);
+  transform: translate(-50%,-50%) rotate(-90deg);
 }
 
 /* Título */
