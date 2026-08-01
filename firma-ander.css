@@ -1,0 +1,199 @@
+.underworld {
+  --red: #a8101d;
+  --black: #090909;
+  --white: #eeeae6;
+
+  position: relative;
+  width: 350px;
+  height: 240px;
+  margin: 20px auto;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(0,0,0,.45);
+}
+
+/* Fotografía */
+
+.underworld img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.01);
+  transition: .8s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Oscurecido general */
+
+.underworld::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.78),
+      rgba(0,0,0,.28) 55%,
+      rgba(0,0,0,.08)
+    ),
+    linear-gradient(0deg,
+      rgba(0,0,0,.72),
+      transparent 55%
+    );
+  transition: .8s ease;
+}
+
+/* Línea roja inferior */
+
+.underworld::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  width: 42px;
+  height: 4px;
+  background: var(--red);
+  transition: .7s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Franja lateral */
+
+.uw-side {
+  position: absolute;
+  z-index: 3;
+  inset: 0 auto 0 0;
+  width: 42px;
+  background: rgba(5,5,5,.72);
+  border-right: 1px solid rgba(255,255,255,.12);
+  transition: .7s cubic-bezier(.2,.8,.2,1);
+}
+
+.uw-side small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  white-space: nowrap;
+  font: 400 7px Arial, sans-serif;
+  letter-spacing: 3px;
+  transform: translate(-50%,-50%) rotate(-90deg);
+  transition: .5s ease;
+}
+
+.uw-symbol {
+  position: absolute;
+  top: 15px;
+  left: 13px;
+  font-size: 15px;
+  color: var(--red);
+  transition: .7s ease;
+}
+
+/* Texto superior */
+
+.uw-top {
+  position: absolute;
+  z-index: 3;
+  top: 17px;
+  right: 18px;
+  font: 400 7px Arial, sans-serif;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.72);
+}
+
+/* Título */
+
+.uw-title {
+  position: absolute;
+  z-index: 3;
+  left: 61px;
+  bottom: 27px;
+  transition: .7s cubic-bezier(.2,.8,.2,1);
+}
+
+.uw-title i {
+  display: block;
+  margin: 0 0 1px 2px;
+  color: var(--red);
+  font: italic 12px "Source Serif 4", serif;
+}
+
+.uw-title b {
+  display: block;
+  font: 400 48px/.78 "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+}
+
+.uw-title em {
+  display: block;
+  margin-top: 5px;
+  font: normal 8px Arial, sans-serif;
+  letter-spacing: 7px;
+  color: rgba(255,255,255,.75);
+}
+
+/* Frase oculta */
+
+.uw-quote {
+  position: absolute;
+  z-index: 3;
+  left: 28px;
+  bottom: 24px;
+  padding-left: 12px;
+  border-left: 2px solid var(--red);
+  color: rgba(255,255,255,.82);
+  font: italic 10px/1.6 "Source Serif 4", serif;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: .55s ease .12s;
+}
+
+/* Hover */
+
+.underworld:hover img {
+  filter: brightness(.5) contrast(1.08) blur(1.5px);
+  transform: scale(1.11) translateX(12px);
+}
+
+.underworld:hover::before {
+  background: rgba(0,0,0,.43);
+}
+
+.underworld:hover::after {
+  width: 100%;
+}
+
+.underworld:hover .uw-side {
+  width: 10px;
+  background: var(--red);
+}
+
+.underworld:hover .uw-side small {
+  opacity: 0;
+}
+
+.underworld:hover .uw-symbol {
+  left: 21px;
+  transform: rotate(180deg);
+  color: var(--white);
+}
+
+.underworld:hover .uw-title {
+  left: 28px;
+  bottom: 125px;
+}
+
+.underworld:hover .uw-title b {
+  letter-spacing: 3px;
+}
+
+.underworld:hover .uw-title em {
+  letter-spacing: 5px;
+}
+
+.underworld:hover .uw-quote {
+  opacity: 1;
+  transform: translateY(0);
+}
