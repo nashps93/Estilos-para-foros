@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
 @import url("https://nashps93.github.io/Estilos-para-foros/game-icons.css");
 
 .underworld {
-  --red: #a8101d;
+  --red: #960101;
   --black: #090909;
   --white: #eeeae6;
 
@@ -13,7 +13,8 @@
   overflow: hidden;
   background: var(--black);
   color: var(--white);
-  box-shadow: 0 12px 30px rgba(0,0,0,.45);
+  outline: 10px solid var(--black);
+  outline-offset: 5px;
 }
 
 /* Foto */
@@ -24,7 +25,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transform: scale(1.01);
+  transform: scale(1);
   transition: .8s cubic-bezier(.2,.8,.2,1);
 }
 
@@ -125,7 +126,7 @@
 
 .uw-title m {
   display: block;
-  font: 400 48px/.78 "Bebas Neue", sans-serif;
+  font: 400 32px/32px "New Rocker", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -147,7 +148,7 @@
   padding-left: 12px;
   border-left: 2px solid var(--red);
   color: rgba(255,255,255,.82);
-  font: italic 10px/14px "Source Serif 4", serif;
+  font: italic 11px/14px "Source Serif 4", serif;
   opacity: 0;
   transform: translateY(14px);
   transition: .55s ease .12s;
@@ -157,7 +158,7 @@
 
 .underworld:hover img {
   filter: brightness(.5) contrast(1.08) blur(1.5px);
-  transform: scale(1.11) translateX(12px);
+  transform: scale(1.15) translateX(12px);
 }
 
 .underworld:hover::before {
