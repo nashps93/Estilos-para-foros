@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap");
+@import url("https://nashps93.github.io/Estilos-para-foros/game-icons.css");
+
 .underworld {
   --red: #a8101d;
   --black: #090909;
@@ -13,7 +16,7 @@
   box-shadow: 0 12px 30px rgba(0,0,0,.45);
 }
 
-/* Fotografía */
+/* Foto */
 
 .underworld img {
   position: absolute;
@@ -71,7 +74,7 @@
   transition: .7s cubic-bezier(.2,.8,.2,1);
 }
 
-.uw-side small {
+.uw-side son {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,8 +88,8 @@
 .uw-symbol {
   position: absolute;
   top: 15px;
-  left: 13px;
-  font-size: 15px;
+  left: 12px;
+  font-size: 20px;
   color: var(--red);
   transition: .7s ease;
 }
@@ -113,14 +116,14 @@
   transition: .7s cubic-bezier(.2,.8,.2,1);
 }
 
-.uw-title i {
+.uw-title t {
   display: block;
   margin: 0 0 1px 2px;
   color: var(--red);
   font: italic 12px "Source Serif 4", serif;
 }
 
-.uw-title b {
+.uw-title m {
   display: block;
   font: 400 48px/.78 "Bebas Neue", sans-serif;
   letter-spacing: 1px;
@@ -144,13 +147,13 @@
   padding-left: 12px;
   border-left: 2px solid var(--red);
   color: rgba(255,255,255,.82);
-  font: italic 10px/1.6 "Source Serif 4", serif;
+  font: italic 10px/14px "Source Serif 4", serif;
   opacity: 0;
   transform: translateY(14px);
   transition: .55s ease .12s;
 }
 
-/* Hover */
+/* Hovers */
 
 .underworld:hover img {
   filter: brightness(.5) contrast(1.08) blur(1.5px);
@@ -158,7 +161,7 @@
 }
 
 .underworld:hover::before {
-  background: rgba(0,0,0,.43);
+  background: rgba(0,0,0,.40);
 }
 
 .underworld:hover::after {
@@ -170,13 +173,13 @@
   background: var(--red);
 }
 
-.underworld:hover .uw-side small {
+.underworld:hover .uw-side son {
   opacity: 0;
 }
 
 .underworld:hover .uw-symbol {
-  left: 21px;
-  transform: rotate(180deg);
+  left: 28px;
+  transform: rotate(360deg);
   color: var(--white);
 }
 
