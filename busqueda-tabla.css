@@ -167,8 +167,8 @@
 .HERMC-txt { 
   text-align: justify;
   hyphens: auto;
-  font: 11px/14px Arial;
-  margin-bottom: 10px;
+  font: 13px/16px Arial;
+  margin-bottom: 60px;
 } 
 
 .HERMC-txt::before {
