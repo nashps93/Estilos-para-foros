@@ -1,0 +1,304 @@
+@import url("https://nashps93.github.io/Estilos-para-foros/game-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap");
+
+.HERMC, .HERMC * {
+  box-sizing: border-box;
+  scrollbar-color: #0006 #0002 !important;
+  scrollbar-width: thin;
+  transition: 1.5s; } 
+
+.HERMC div::-webkit-scrollbar-thumb {
+  background: #0006 !important; }
+
+.HERMC input, .HERMC br { display: none; } 
+
+.HERMC { 
+  --color-01: #202a44;
+  --color-02: #FFF;
+  --color-03: #550614;
+  width: 500px;
+  overflow: hidden;
+  padding: 20px;
+  margin: auto;
+  font: 10px Montserrat;
+  color: #DDD;
+  position: relative;} 
+
+.HERMC > div {
+  min-height: 300px;
+  background-position: top center;
+  background-color: #101010;
+  background-blend-mode: overlay;
+  border: 1px solid var(--color-01);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1; } 
+
+.HERMC > div::after, .HERMC > div::before, .HERMC::after, .HERMC::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+    z-index: 200;
+    background: #111;
+    border-color: var(--color-01);
+    border-style: solid; } 
+
+.HERMC::before { border-width: 0 1px 1px 0; border-radius: 0 0 20px 0; } 
+
+.HERMC::after { left: calc(100% - 41px); border-width: 0 0 1px 1px; border-radius: 0 0 0 20px;} 
+
+.HERMC > div::before { top: calc(100% - 41px); border-width: 1px 1px 0 0; border-radius: 0 20px 0 0;} 
+
+.HERMC > div::after { left: calc(100% - 41px); top: calc(100% - 41px); border-width: 1px 0 0 1px; border-radius:  20px 0 0 0;} 
+
+.HERMT0{
+  position: relative;
+}
+
+.HERMC-txt{
+  margin-bottom: 30px;
+}
+
+.HERMT1 {
+    margin: 30px auto;
+    width: 250px;
+    height: 250px;
+    border: 1px solid var(--color-03);
+    border-radius: 100%;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    animation: loader-rotate 5s linear infinite;
+}
+
+.circubeat {
+    width: 250px;
+    height: 250px;
+    border: 1px solid var(--color-03);
+    border-radius: 50%;
+    position: absolute;
+    animation: loader-scale 2s ease-out infinite;
+    left: 0;
+    top: 0;
+}
+
+.HERMT1:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-01);
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.HERMT1:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-01);
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.HERMT2 {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.HERMT2 i{
+  font-size: 42px;
+  line-height: 0;
+  color: var(--color-03);
+}
+
+.HERMC-p {
+    font-size: 22px;
+    margin-top: 0;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-style: italic;
+    border-bottom: 1px dotted var(--color-01);
+} 
+
+.HERPJ{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.HERPJ img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.HERPJ-data{
+  width: calc(100% - 120px);
+  height: 120px;
+  overflow: auto;
+  padding: 10px;
+  font: 11px/16px Arial;
+}
+
+.HERMC > div > b {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  right: 21px;
+  bottom: 21px;
+  background: linear-gradient(to bottom, transparent, #3f3f3f00, #101010 500px); } 
+
+.HERMC > div > b ~ * { position: relative; }  
+
+.HERMC-txt { 
+  text-align: justify;
+  hyphens: auto;
+  font: 11px/14px Arial;
+  margin-bottom: 10px;
+} 
+
+.HERMC-txt::before {
+  content: '☙';
+  float: left;
+  font-size: 50px;
+  line-height: 10px;
+  color: var(--color-01);
+  margin: 20px 10px; } 
+
+.HERICO {
+    width: 20%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatey(0px);
+}
+
+.HERICO i{
+    font-size: 25px;
+    color: var(--color-03);
+}
+
+.HERICO:before, .HERICO:after {
+    content: '';
+    border: 1px solid var(--color-01);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.HERICO:after {
+    animation: loader-rotate 3s linear infinite;
+}
+
+.HERICO:before {
+    animation: loader-rotate 5s linear infinite;
+}
+
+.HERMC-trama input:checked ~ div br, .HERMC-txt br { display: block; margin: 5px; } 
+
+.hertxt, .hertxt-02 {
+    width: 80%;
+    line-height: 12px;
+    font-size: 8px;
+    font-family: Times New Roman;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hertxt::after{
+    content: "";
+    height: 1px;
+    width: auto;
+    flex: 1;
+    margin-left: 10px;
+    background-color: var(--color-03);
+}
+
+.hertxt-02::before{
+    content: "";
+    height: 1px;
+    width: auto;
+    flex: 1;
+    margin-right: 10px;
+    background-color: var(--color-03);
+}
+
+.HERMC-trama > b {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+
+.HERMC-trama > div {
+  text-align: justify;
+  hyphenate-character: auto;
+  font: 12px/16px Arial;
+  line-height: 0%;
+  overflow: hidden;
+  transition: .5s;
+  padding-right: 10px;
+} 
+
+.HERMC-trama input:checked ~ div { line-height: 100%; padding: 30px; } 
+
+.HERMC-trama ~ .HERMC-trama { margin-top: 30px; } 
+
+@keyframes loader-rotate{
+0%{
+  transform: rotate(0);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+  }
+
+@keyframes float{
+0% {
+    transform: translatey(0px);
+}
+
+50% {
+    transform: translatey(-13px);
+}
+100% {
+    transform: translatey(0px);
+}
+  }
+
+@keyframes loader-scale{
+0% {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+50% {
+    opacity: 1;
+}
+100% {
+    transform: scale(1.2);
+    opacity: 0;
+}
+  }
