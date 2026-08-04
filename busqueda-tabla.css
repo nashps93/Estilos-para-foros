@@ -188,7 +188,7 @@
     transform: translatey(0px);
 }
 
-.HERICO i{
+.HERICO span{
     font-size: 25px;
     color: var(--color-03);
 }
