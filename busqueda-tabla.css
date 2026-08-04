@@ -50,11 +50,11 @@
 
 .HERMC::before { border-width: 0 1px 1px 0; border-radius: 0 0 20px 0; } 
 
-.HERMC::after { left: calc(100% - 41px); border-width: 0 0 1px 1px; border-radius: 0 0 0 20px;} 
+.HERMC::after { left: calc(100% - 40px); border-width: 0 0 1px 1px; border-radius: 0 0 0 20px;} 
 
-.HERMC > div::before { top: calc(100% - 41px); border-width: 1px 1px 0 0; border-radius: 0 20px 0 0;} 
+.HERMC > div::before { top: calc(100% - 40px); border-width: 1px 1px 0 0; border-radius: 0 20px 0 0;} 
 
-.HERMC > div::after { left: calc(100% - 41px); top: calc(100% - 41px); border-width: 1px 0 0 1px; border-radius:  20px 0 0 0;} 
+.HERMC > div::after { left: calc(100% - 40px); top: calc(100% - 40px); border-width: 1px 0 0 1px; border-radius:  20px 0 0 0;} 
 
 .HERMT0{
   position: relative;
