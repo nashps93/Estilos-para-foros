@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@600&display=swap");
+@import url("https://nashps93.github.io/Estilos-para-foros/game-icons.css");
+
+body{
+  background: #101010;
+}
+
+.astersig{
+  --gold:#efd38b;
+  position:relative;
+  width:300px;
+  height:240px;
+  margin:auto;
+  overflow:hidden;
+  background:#101820;
+  color:#fffdf8;
+}
+
+.as-photo,.as-gif,.as-filter{
+  position:absolute;
+  inset:0;
+}
+
+.as-photo{
+  filter:brightness(.96) contrast(1.02);
+  transition:opacity .7s ease;
+}
+
+.as-gif{
+  filter:brightness(.58) contrast(.95) saturate(.7);
+  opacity:0;
+  transition:opacity .7s ease;
+}
+
+.as-filter{
+  background:
+    linear-gradient(90deg,rgba(7,15,22,.30),rgba(7,15,22,.04)),
+    linear-gradient(0deg,rgba(7,15,22,.38),transparent 65%);
+  transition:background .7s ease;
+}
+
+.as-frame{
+  position:absolute;
+  inset:34px 34px 34px 47px;
+  border:1px solid rgba(255,248,225,.22);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:inset .65s cubic-bezier(.2,.8,.2,1),
+             border-color .65s ease;
+}
+
+.as-origin{
+  position:absolute;
+  z-index:3;
+  left:14px;
+  top:50%;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:rgba(255,255,255,.78);
+  font:600 7px Inter,sans-serif;
+  letter-spacing:2px;
+  writing-mode:vertical-rl;
+  transform:translateY(-50%) rotate(180deg);
+  transition:letter-spacing .6s ease,color .6s ease;
+}
+
+.as-origin:after{
+  content:"";
+  width:1px;
+  height:25px;
+  background:var(--gold);
+  transition:height .6s ease;
+}
+
+.as-origin span{
+  color:var(--gold);
+  font-size:18px;
+  transition:transform .7s ease;
+}
+
+.as-title{
+  font:600 58px/.8 "Cormorant Garamond",serif;
+  letter-spacing:2px;
+  transition:letter-spacing .6s ease;
+}
+
+.as-line{
+  width:32px;
+  height:1px;
+  margin:12px 0 9px;
+  background:var(--gold);
+  transition:width .6s ease;
+}
+
+.as-quote{
+  font:italic 12px "Cormorant Garamond",serif;
+  letter-spacing:.6px;
+  white-space:nowrap;
+  clip-path:inset(0 100% 0 0);
+  transition:clip-path .65s cubic-bezier(.2,.8,.2,1);
+}
+
+.astersig:hover .as-photo{
+  opacity:0;
+}
+
+.astersig:hover .as-gif{
+  opacity:1;
+}
+
+.astersig:hover .as-filter{
+  background:
+    linear-gradient(90deg,rgba(8,17,25,.35),rgba(8,17,25,.20)),
+    linear-gradient(0deg,rgba(8,17,25,.30),transparent 50%);
+}
+
+.astersig:hover .as-frame{
+  inset:27px 27px 27px 40px;
+  border-color:rgba(239,211,139,.42);
+}
+
+.asterig:hover .as-origin{
+  color:#fff;
+  letter-spacing:3px;
+}
+
+.astersig:hover .as-origin:after{
+  height:42px;
+}
+
+.astersig:hover .as-origin span{
+  transform:rotate(180deg);
+}
+
+.astersig:hover .as-title{
+  letter-spacing:7px;
+}
+
+.astersig:hover .as-line{
+  width:105px;
+}
+
+.astersig:hover .as-quote{
+  clip-path:inset(0);
+}
