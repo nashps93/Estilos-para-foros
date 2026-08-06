@@ -58,6 +58,7 @@
   color:rgba(255,255,255,.78);
   font:600 7px Inter,sans-serif;
   letter-spacing:2px;
+  text-align: left;
   writing-mode:vertical-rl;
   transform:translateY(-50%) rotate(180deg);
   transition:letter-spacing .6s ease,color .6s ease;
@@ -94,6 +95,7 @@
 .as-quote{
   font:italic 12px "Cormorant Garamond",serif;
   letter-spacing:.6px;
+  text-align: center;
   white-space:nowrap;
   clip-path:inset(0 100% 0 0);
   transition:clip-path .65s cubic-bezier(.2,.8,.2,1);
