@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@600&display=swap");
 @import url("https://nashps93.github.io/Estilos-para-foros/game-icons.css");
 
-body{
-  background: #101010;
-}
-
 .astersig{
   --gold:#efd38b;
   position:relative;
