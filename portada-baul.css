@@ -1,5 +1,5 @@
 /* ==========================================================
-   PORTADA LEANDER — FOROACTIVO
+   PORTADA LEANDER - BAUL
    ========================================================== */
 
 .portada-leander {
@@ -26,25 +26,20 @@
   line-height: normal;
 }
 
-/* ==========================================================
-   PROTECCIÓN CONTRA FOROACTIVO
-   ========================================================== */
-
-/* Foroactivo transforma saltos de línea en BR.
-   Dentro de la portada directamente los anulamos. */
+/* Anular BRs de foroactivo */
 
 .portada-leander br {
   display: none !important;
 }
 
-/* Box sizing consistente */
+/* Box sizing */
 
 .portada-leander,
 .portada-leander * {
   box-sizing: border-box;
 }
 
-/* Elimina márgenes que pueda imponer el tema */
+/* Eliminar margenes */
 
 .portada-leander h1,
 .portada-leander h2,
@@ -53,7 +48,7 @@
   padding: 0;
 }
 
-/* Neutraliza estilos generales habituales */
+/* Neutralización de estilos del foro */
 
 .portada-leander a {
   color: inherit;
@@ -66,8 +61,7 @@
   padding: 0;
 }
 
-/* Protección adicional por si algún STRONG/B aparece
-   accidentalmente en el futuro */
+/* Strongs anulados */
 
 .portada-leander strong,
 .portada-leander b {
@@ -272,11 +266,7 @@
 }
 
 
-/*
-   Truco HTML/CSS:
-   el AUDIO sigue siendo un control nativo real,
-   pero el contenedor muestra únicamente su zona izquierda.
-*/
+/* REPRODUCTOR */
 
 .play-shell {
   position: relative;
@@ -308,7 +298,7 @@
   position: absolute;
 
   top: 0;
-  left: -1px;
+  left: -5px;
 
   width: 280px;
   height: 42px;
