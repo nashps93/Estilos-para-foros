@@ -1,79 +1,117 @@
-/* ==========================================
-   PORTADA LEANDER
-   ========================================== */
+/* ==========================================================
+   PORTADA LEANDER — FOROACTIVO
+   ========================================================== */
 
 .portada-leander {
-
   --negro: #080808;
-  --negro-2: #0d0d0d;
-  --negro-3: #121212;
-
+  --negro-2: #0b0b0b;
+  --negro-3: #0e0e0e;
   --blanco: #e8e4df;
   --gris: #77716d;
-  --gris-oscuro: #252525;
-
+  --linea: #202020;
   --rojo: #960101;
   --dorado: #dd9a3c;
 
-
   width: min(1050px, 100%);
-
   margin: 30px auto;
-
   padding: 18px;
-
   box-sizing: border-box;
 
   background: var(--negro);
-
   border: 1px solid #191919;
 
   color: var(--blanco);
-
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+}
+
+/* ==========================================================
+   PROTECCIÓN CONTRA FOROACTIVO
+   ========================================================== */
+
+/* Foroactivo transforma saltos de línea en BR.
+   Dentro de la portada directamente los anulamos. */
+
+.portada-leander br {
+  display: none !important;
+}
+
+/* Box sizing consistente */
+
+.portada-leander,
+.portada-leander * {
+  box-sizing: border-box;
+}
+
+/* Elimina márgenes que pueda imponer el tema */
+
+.portada-leander h1,
+.portada-leander h2,
+.portada-leander p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Neutraliza estilos generales habituales */
+
+.portada-leander a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portada-leander img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Protección adicional por si algún STRONG/B aparece
+   accidentalmente en el futuro */
+
+.portada-leander strong,
+.portada-leander b {
+  color: inherit !important;
+  font: inherit !important;
 }
 
 
-
-/* ==========================================
+/* ==========================================================
    HERO
-   ========================================== */
+   ========================================================== */
 
-.hero {
-
+.hero-leander {
   display: flex;
+  align-items: stretch;
 
+  width: 100%;
   min-height: 560px;
 
   background: var(--negro-2);
 }
 
 
-
-/* ==========================================
+/* ==========================================================
    IMAGEN PRINCIPAL
-   ========================================== */
+   ========================================================== */
 
 .hero-imagen {
-
   position: relative;
 
-  flex: 1.3;
+  display: flex;
+  flex: 1.3 1 0;
 
   min-width: 0;
+  min-height: 560px;
 
   overflow: hidden;
 }
 
-
 .hero-imagen img {
-
   display: block;
 
   width: 100%;
-  height: 100%;
-
-  min-height: 560px;
+  height: 560px;
 
   object-fit: cover;
 
@@ -83,10 +121,39 @@
     brightness(.72);
 }
 
-/* línea roja sobre imagen */
+.hero-numero {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.hero-vertical {
+  position: absolute;
+
+  left: 22px;
+  bottom: 25px;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+  color: rgba(255,255,255,.45);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
 
 .hero-imagen::after {
-
   content: "";
 
   position: absolute;
@@ -101,42 +168,37 @@
 }
 
 
-
-/* ==========================================
-   HERO INFO
-   ========================================== */
+/* ==========================================================
+   INFORMACIÓN HERO
+   ========================================================== */
 
 .hero-info {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  flex: .9;
+  flex: .9 1 0;
+
+  min-width: 0;
 
   padding: 65px 55px;
 
-  box-sizing: border-box;
-
-  background: #0b0b0b;
+  background: var(--negro-2);
 }
 
-
-.simbolo {
-
-  margin-bottom: 40px;
+.simbolo-leander {
+  margin: 0 0 40px;
 
   color: var(--rojo);
 
   font-size: 30px;
-
   line-height: 1;
 }
 
-
 .pretitle {
+  display: block;
 
-  margin-bottom: 14px;
+  margin: 0 0 14px;
 
   color: var(--dorado);
 
@@ -146,37 +208,32 @@
   letter-spacing: 4px;
 }
 
-
 .hero-info h1 {
+  display: block;
 
-  margin: 0;
-
-  color: #f1eeeb;
+  color: #f1eeeb !important;
 
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: clamp(40px, 5vw, 66px);
-
-  font-weight: normal;
+  font-weight: 400;
 
   line-height: .9;
 
   letter-spacing: -2px;
 }
 
-
-.hero-info h1 strong {
-
+.hero-info h1 span {
   display: block;
 
-  color: #f1eeeb;
-
-  font-weight: normal;
+  color: inherit !important;
 }
 
+.hero-info h1 .apellido {
+  color: inherit !important;
+}
 
 .linea-roja {
-
   width: 70px;
   height: 3px;
 
@@ -185,14 +242,12 @@
   background: var(--rojo);
 }
 
-
 .frase {
+  display: block;
 
   max-width: 330px;
 
-  margin: 0;
-
-  color: #aaa29d;
+  color: #aaa29d !important;
 
   font-family: Georgia, serif;
 
@@ -203,13 +258,11 @@
 }
 
 
-
-/* ==========================================
+/* ==========================================================
    MÚSICA
-   ========================================== */
+   ========================================================== */
 
 .musica {
-
   display: flex;
   align-items: center;
 
@@ -219,65 +272,84 @@
 }
 
 
-.play {
+/*
+   Truco HTML/CSS:
+   el AUDIO sigue siendo un control nativo real,
+   pero el contenedor muestra únicamente su zona izquierda.
+*/
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.play-shell {
+  position: relative;
 
-  flex: 0 0 42px;
+  flex: 0 0 44px;
 
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
 
-  padding: 0;
+  overflow: hidden;
 
   border: 1px solid #333;
-
   border-radius: 50%;
 
-  background: transparent;
+  background: #0b0b0b;
 
-  color: #ffffff;
-
-  font-size: 11px;
-
-  cursor: pointer;
-
-  transition: .25s ease;
+  transition:
+    border-color .25s ease,
+    transform .25s ease;
 }
 
-
-.play:hover {
-
+.play-shell:hover {
   border-color: var(--rojo);
 
-  color: var(--rojo);
+  transform: scale(1.05);
+}
 
-  transform: scale(1.06);
+.audio-leander {
+  position: absolute;
+
+  top: 0;
+  left: -1px;
+
+  width: 280px;
+  height: 42px;
+
+  margin: 0;
+  padding: 0;
+
+  opacity: .85;
 }
 
 
-.play.reproduciendo {
+/* Chrome / Edge / Safari */
 
-  background: var(--rojo);
+.audio-leander::-webkit-media-controls-enclosure {
+  border-radius: 0;
 
-  border-color: var(--rojo);
-
-  color: white;
+  background: #0b0b0b;
 }
 
+.audio-leander::-webkit-media-controls-panel {
+  background: #0b0b0b;
+}
+
+.audio-leander::-webkit-media-controls-play-button {
+  opacity: 1;
+}
+
+
+/* Información de canción */
 
 .musica-info {
-
   display: flex;
   flex-direction: column;
 
   gap: 4px;
+
+  min-width: 0;
 }
 
-
-.musica-info span {
+.playing {
+  display: block;
 
   color: var(--rojo);
 
@@ -287,8 +359,8 @@
   letter-spacing: 2px;
 }
 
-
-.musica-info strong {
+.cancion {
+  display: block;
 
   color: #d8d2cd;
 
@@ -296,23 +368,21 @@
   font-weight: 600;
 
   letter-spacing: 1px;
-
   text-transform: uppercase;
 }
 
 
-
-/* ==========================================
+/* ==========================================================
    DATOS
-   ========================================== */
+   ========================================================== */
 
 .datos-principales {
-
-  display: grid;
-
-  grid-template-columns: 230px 1fr;
+  display: flex;
+  align-items: flex-start;
 
   gap: 55px;
+
+  width: 100%;
 
   padding: 65px 55px;
 
@@ -322,19 +392,19 @@
 }
 
 
-
-/* título lateral */
+/* Título */
 
 .datos-titulo {
-
   display: flex;
   align-items: flex-start;
+
+  flex: 0 0 230px;
 
   gap: 16px;
 }
 
-
 .numero-seccion {
+  display: block;
 
   margin-top: 4px;
 
@@ -346,12 +416,14 @@
   letter-spacing: 2px;
 }
 
+.titulo-datos {
+  display: block;
+}
 
-.datos-titulo small {
-
+.archivo {
   display: block;
 
-  margin-bottom: 7px;
+  margin: 0 0 7px;
 
   color: var(--gris);
 
@@ -361,64 +433,66 @@
   letter-spacing: 3px;
 }
 
-
-.datos-titulo h2 {
-
-  margin: 0;
-
-  color: #f1eeeb;
+.titulo-datos h2 {
+  color: #f1eeeb !important;
 
   font-family: Georgia, serif;
 
   font-size: 32px;
-
-  font-weight: normal;
+  font-weight: 400;
 
   letter-spacing: -1px;
 }
 
 
-
-/* contenido */
+/* Contenido */
 
 .datos-contenido {
-
   display: flex;
+  align-items: flex-start;
+
+  flex: 1 1 auto;
 
   gap: 55px;
-}
-
-
-.datos-columna {
-
-  flex: 1;
 
   min-width: 0;
 }
 
+.datos-columna {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 1 0;
+
+  min-width: 0;
+}
 
 .dato {
-
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
   gap: 25px;
 
+  width: 100%;
+
+  min-height: 40px;
+
   padding: 13px 0;
 
-  border-bottom: 1px solid #202020;
+  border-bottom: 1px solid var(--linea);
 }
 
-
 .dato:first-child {
-
   padding-top: 0;
 }
 
+.campo {
+  flex: 1 1 auto;
 
-.dato span {
+  min-width: 0;
 
-  color: var(--gris);
+  color: var(--gris) !important;
 
   font-size: 9px;
   font-weight: 700;
@@ -426,72 +500,73 @@
   letter-spacing: 1px;
 
   text-transform: uppercase;
+
+  transition: color .2s ease;
 }
 
+.valor {
+  flex: 0 1 auto;
 
-.dato strong {
+  max-width: 55%;
 
-  color: #ddd7d2;
+  color: #ddd7d2 !important;
 
   font-size: 11px;
   font-weight: 400;
 
+  line-height: 1.4;
+
   text-align: right;
 }
 
-
-/* pequeño énfasis al pasar */
-
-.dato:hover span {
-
-  color: var(--rojo);
+.dato:hover .campo {
+  color: var(--rojo) !important;
 }
 
 
+/* ==========================================================
+   DETALLE VISUAL
+   ========================================================== */
 
-/* ==========================================
-   SECCIÓN DECORATIVA
-   ========================================== */
-
-.detalle {
-
+.detalle-leander {
   display: flex;
+  align-items: stretch;
+
+  width: 100%;
 
   min-height: 230px;
 
-  border-top: 1px solid #1c1c1c;
-
   background: var(--negro);
+
+  border-top: 1px solid #1c1c1c;
 }
 
-
 .detalle-texto {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  flex: 1;
+  flex: 1 1 auto;
+
+  min-width: 0;
 
   padding: 45px 60px;
 }
 
-
 .detalle-icono {
+  display: block;
 
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 
   color: var(--rojo);
 
   font-size: 14px;
 }
 
+.detalle-frase {
+  display: block;
 
-.detalle-texto p {
-
-  margin: 0;
-
-  color: #ece8e4;
+  color: #ece8e4 !important;
 
   font-family: Georgia, serif;
 
@@ -502,8 +577,14 @@
   letter-spacing: .5px;
 }
 
+.detalle-frase span {
+  display: block;
 
-.detalle-texto small {
+  color: inherit !important;
+}
+
+.detalle-subtexto {
+  display: block;
 
   margin-top: 17px;
 
@@ -517,20 +598,17 @@
 }
 
 
-/* segunda imagen */
+/* Segunda imagen */
 
 .detalle-imagen {
+  display: flex;
 
   flex: 0 0 300px;
 
   padding: 20px;
-
-  box-sizing: border-box;
 }
 
-
 .detalle-imagen img {
-
   display: block;
 
   width: 100%;
@@ -545,74 +623,70 @@
 }
 
 
-
-/* ==========================================
-   MENÚ
-   ========================================== */
+/* ==========================================================
+   NAVEGACIÓN
+   ========================================================== */
 
 .menu-leander {
-
   display: flex;
+  align-items: stretch;
 
-  border-top: 1px solid #252525;
+  width: 100%;
 
   background: #090909;
+
+  border-top: 1px solid #252525;
 }
 
-
 .menu-leander a {
-
   position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  flex: 1;
+  flex: 1 1 0;
 
   gap: 9px;
 
+  min-width: 0;
   min-height: 52px;
 
-  color: #7f7975;
-
-  text-decoration: none;
+  color: #7f7975 !important;
 
   font-size: 8px;
   font-weight: 700;
 
   letter-spacing: 1.5px;
 
-  transition: .25s ease;
+  transition:
+    color .25s ease,
+    background .25s ease;
 }
 
-
-.menu-leander a span {
-
-  color: #3d3937;
+.menu-numero {
+  color: #3d3937 !important;
 
   font-size: 7px;
+
+  transition: color .25s ease;
 }
 
+.menu-texto {
+  color: inherit !important;
+}
 
 .menu-leander a:hover {
-
-  color: #ffffff;
+  color: #fff !important;
 
   background: #0e0e0e;
 }
 
-
-.menu-leander a:hover span {
-
-  color: var(--rojo);
+.menu-leander a:hover .menu-numero {
+  color: var(--rojo) !important;
 }
 
-
-/* pequeña línea inferior */
-
 .menu-leander a::after {
-
   content: "";
 
   position: absolute;
@@ -630,131 +704,114 @@
   transition: width .25s ease;
 }
 
-
 .menu-leander a:hover::after {
-
   width: 35%;
 }
 
 
-
-/* ==========================================
+/* ==========================================================
    RESPONSIVE
-   ========================================== */
+   ========================================================== */
 
 @media (max-width: 800px) {
 
-  .hero {
-
+  .hero-leander {
     flex-direction: column;
   }
 
-
   .hero-imagen {
+    flex: none;
 
+    width: 100%;
     min-height: 480px;
   }
 
-
   .hero-imagen img {
-
     height: 480px;
-
-    min-height: auto;
   }
-
 
   .hero-info {
+    flex: none;
+
+    width: 100%;
 
     padding: 45px 35px;
   }
-
 
   .datos-principales {
-
-    grid-template-columns: 1fr;
+    flex-direction: column;
 
     gap: 35px;
 
     padding: 45px 35px;
   }
 
-
-  .datos-contenido {
-
-    gap: 35px;
-  }
-
-
-  .detalle {
-
-    flex-direction: column;
-  }
-
-
-  .detalle-imagen {
-
+  .datos-titulo {
     flex: none;
 
     width: 100%;
   }
 
+  .datos-contenido {
+    width: 100%;
+
+    gap: 35px;
+  }
+
+  .detalle-leander {
+    flex-direction: column;
+  }
+
+  .detalle-imagen {
+    flex: none;
+
+    width: 100%;
+  }
 
   .detalle-imagen img {
-
     height: 250px;
   }
 
-
   .menu-leander {
-
     flex-wrap: wrap;
   }
 
-
   .menu-leander a {
-
     flex: 1 1 33.333%;
   }
 
 }
 
 
-
 @media (max-width: 550px) {
 
   .portada-leander {
-
     padding: 10px;
   }
 
-
   .hero-info h1 {
-
     font-size: 42px;
   }
 
-
   .datos-contenido {
-
     flex-direction: column;
+
+    gap: 0;
   }
 
+  .datos-columna {
+    width: 100%;
+  }
 
   .dato {
-
     gap: 15px;
   }
 
-
   .detalle-texto {
-
     padding: 40px 30px;
   }
 
-
   .menu-leander a {
-
     flex: 1 1 50%;
   }
 
