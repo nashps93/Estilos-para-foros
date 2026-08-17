@@ -1,0 +1,485 @@
+/* ==========================================================
+   CRONOLOGÍA — LEANDER
+   ========================================================== */
+
+.cronologia {
+  --fondo: #161616;
+  --fondo-hover: #211d1d;
+
+  --texto: #e8e4df;
+  --texto-suave: #777270;
+
+  --rojo: #960101;
+  --dorado: #dd9a3c;
+
+  --linea: #393232;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 30px auto;
+  padding: 50px 55px;
+
+  box-sizing: border-box;
+
+  background: var(--fondo);
+
+  color: var(--texto);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+}
+
+
+/* ==========================================================
+   FOROACTIVO ANULACIONES
+   ========================================================== */
+
+.cronologia,
+.cronologia * {
+  box-sizing: border-box;
+}
+
+
+/* Anular brs */
+
+.cronologia br {
+  display: none !important;
+}
+
+
+/* estilos del foro */
+
+.cronologia h1,
+.cronologia h2,
+.cronologia p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.cronologia a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+
+.cronologia b,
+.cronologia strong {
+  color: inherit !important;
+  font: inherit !important;
+}
+
+
+/* Font Awesome */
+
+.cronologia i {
+  color: inherit;
+  font-style: normal;
+}
+
+
+/* ==========================================================
+   CABECERA
+   ========================================================== */
+
+.cronologia .cabecera {
+  position: relative;
+
+  margin-bottom: 55px;
+
+  text-align: center;
+}
+
+
+.cronologia .subtitulo {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--rojo) !important;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+
+.cronologia .cabecera h1 {
+  color: #f2efeb !important;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+
+.cronologia .cabecera p {
+  margin-top: 12px;
+
+  color: var(--texto-suave) !important;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 11px;
+  font-style: italic;
+
+  line-height: 1.5;
+
+  letter-spacing: .5px;
+}
+
+
+.cronologia .cabecera::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 1px;
+
+  margin: 25px auto 0;
+
+  background: var(--rojo);
+}
+
+
+/* ==========================================================
+   MESES
+   ========================================================== */
+
+.cronologia .mes {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 45px;
+}
+
+
+.cronologia .mes:last-child {
+  margin-bottom: 0;
+}
+
+
+.cronologia .mes h2 {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  gap: 14px;
+
+  margin: 0 0 20px;
+
+  color: #f1eeea !important;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+
+/* Líneas planas */
+
+.cronologia .mes h2::before,
+.cronologia .mes h2::after {
+  content: "";
+
+  flex: 1 1 auto;
+
+  height: 1px;
+
+  background: var(--linea);
+}
+
+
+.cronologia .mes h2 > span {
+  display: block;
+
+  flex: 0 0 auto;
+
+  white-space: nowrap;
+}
+
+
+.cronologia .mes h2 small {
+  display: block;
+
+  flex: 0 0 auto;
+
+  color: var(--rojo) !important;
+
+  font-size: inherit;
+  font-weight: inherit;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+/* ==========================================================
+   CONTENEDOR DE TEMAS
+   ========================================================== */
+
+.cronologia .temas {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  gap: 4px;
+}
+
+
+/* ==========================================================
+   TEMA
+   ========================================================== */
+
+.cronologia .tema {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 43px;
+
+  gap: 15px;
+
+  padding: 7px 12px;
+
+  background: transparent;
+
+  border: 0;
+  border-left: 2px solid transparent;
+
+  color: var(--texto) !important;
+
+  transition:
+    background-color .25s ease,
+    border-color .25s ease,
+    padding-left .25s ease;
+}
+
+
+.cronologia .tema:hover {
+  padding-left: 17px;
+
+  background: var(--fondo-hover);
+
+  border-left-color: var(--rojo);
+}
+
+
+/* ==========================================================
+   CANDADO
+   ========================================================== */
+
+.cronologia .icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 27px;
+
+  width: 27px;
+  height: 27px;
+
+  color: var(--rojo) !important;
+
+  border: 1px solid #513436;
+  border-radius: 50%;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  transition:
+    color .25s ease,
+    border-color .25s ease,
+    background-color .25s ease;
+}
+
+
+.cronologia .tema:hover .icono {
+  color: var(--dorado) !important;
+
+  border-color: var(--rojo);
+
+  background: rgba(150, 1, 1, .10);
+}
+
+
+/* ==========================================================
+   TÍTULO DEL TEMA
+   ========================================================== */
+
+.cronologia .titulo {
+  display: block;
+
+  flex: 1 1 300px;
+
+  min-width: 0;
+
+  color: #ddd9d5 !important;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  transition: color .25s ease;
+}
+
+
+.cronologia .tema:hover .titulo {
+  color: #fff !important;
+}
+
+
+/* ==========================================================
+   PERSONAJE + FECHA
+   ========================================================== */
+
+.cronologia .datos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex: 0 1 180px;
+
+  min-width: 140px;
+
+  gap: 10px;
+
+  color: inherit !important;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+.cronologia .datos::before {
+  content: "";
+
+  flex: 0 0 1px;
+
+  width: 1px;
+  height: 20px;
+
+  margin-right: 4px;
+
+  background: var(--linea);
+}
+
+
+.cronologia .personaje {
+  display: block;
+
+  color: var(--dorado) !important;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.cronologia .datos time {
+  display: block;
+
+  color: var(--texto-suave) !important;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  .cronologia {
+    padding: 35px 20px;
+  }
+
+
+  .cronologia .cabecera h1 {
+    font-size: 23px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .cronologia .tema {
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    gap: 8px 12px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+
+  .cronologia .icono {
+    margin-top: 1px;
+  }
+
+
+  .cronologia .titulo {
+    flex: 1 1 calc(100% - 45px);
+
+    min-width: 0;
+  }
+
+
+  .cronologia .datos {
+    flex: 1 1 100%;
+
+    justify-content: flex-start;
+
+    min-width: 0;
+
+    margin-left: 39px;
+  }
+
+
+  .cronologia .datos::before {
+    display: none;
+  }
+
+}
