@@ -3,8 +3,10 @@
    ========================================================== */
 
 .cronologia {
-  --fondo: #161616;
-  --fondo-hover: #211d1d;
+    --negro: #080808;
+    --negro-2: #0b0b0b;
+    --negro-3: #0e0e0e;
+    --gris: #202020;
 
   --texto: #e8e4df;
   --texto-suave: #777270;
@@ -22,7 +24,9 @@
 
   box-sizing: border-box;
 
-  background: var(--fondo);
+  background: var(--negro-3);
+  outline: 1px solid var(--gris);
+  border: 20px solid var(--negro-2);
 
   color: var(--texto);
 
@@ -282,7 +286,7 @@
 .cronologia .tema:hover {
   padding-left: 17px;
 
-  background: var(--fondo-hover);
+  background: var(--negro);
 
   border-left-color: var(--rojo);
 }
