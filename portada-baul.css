@@ -347,13 +347,22 @@
 
 /* Título */
 
+.datos-lateral {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 255px;
+
+  min-width: 0;
+}
+
 .datos-titulo {
   display: flex;
   align-items: flex-start;
 
-  flex: 0 0 230px;
-
   gap: 16px;
+
+  width: 100%;
 }
 
 .numero-seccion {
@@ -367,6 +376,142 @@
   font-weight: 700;
 
   letter-spacing: 2px;
+}
+
+/* ==========================================================
+   INSPIRACIÓN
+   ========================================================== */
+
+.inspiracion {
+  width: 100%;
+
+  margin-top: 42px;
+}
+
+.inspiracion-titulo {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--rojo) !important;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* 2 x 2 */
+
+.inspiracion-lista {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px 12px;
+
+  width: 100%;
+}
+
+
+/* cada referencia */
+
+.inspiracion-item {
+  display: flex;
+  align-items: center;
+
+  flex: 1 1 calc(50% - 6px);
+
+  min-width: 105px;
+
+  gap: 9px;
+}
+
+
+/* retrato */
+
+.inspiracion-item img {
+  display: block;
+
+  flex: 0 0 36px;
+
+  width: 36px;
+  height: 36px;
+
+  object-fit: cover;
+
+  border: 1px solid rgba(221,154,60,.65) !important;
+  border-radius: 50%;
+
+  filter:
+    grayscale(100%)
+    brightness(.65)
+    contrast(1.08);
+
+  transition:
+    filter .25s ease,
+    border-color .25s ease;
+}
+
+
+.inspiracion-item:hover img {
+  filter:
+    grayscale(65%)
+    brightness(.78)
+    contrast(1.05);
+
+  border-color: var(--rojo) !important;
+}
+
+
+/* textos */
+
+.inspiracion-info {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  flex: 1 1 auto;
+
+  min-width: 0;
+}
+
+
+.inspiracion-nombre {
+  display: block;
+
+  color: var(--rojo) !important;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.inspiracion-origen {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #77716d !important;
+
+  font-size: 8px;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .titulo-datos {
