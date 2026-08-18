@@ -1,0 +1,471 @@
+/* ==========================================================
+   PLAYLIST — LEANDER 
+   ========================================================== */
+
+.spotify-leander {
+  --negro: #080808;
+  --negro-2: #0d0d0d;
+  --negro-3: #121212;
+
+  --blanco: #e9e5e1;
+  --gris: #77716d;
+  --gris-claro: #aaa29d;
+
+  --linea: #252525;
+
+  --rojo: #960101;
+  --dorado: #dd9a3c;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 30px auto;
+  padding: 26px;
+
+  box-sizing: border-box;
+
+  background: var(--negro);
+  border: 1px solid #191919;
+
+  color: var(--blanco);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================================
+   ANULACIONES
+   ========================================================== */
+
+.spotify-leander,
+.spotify-leander * {
+  box-sizing: border-box;
+}
+
+.spotify-leander br {
+  display: none !important;
+}
+
+.spotify-leander h2,
+.spotify-leander p {
+  margin: 0;
+  padding: 0;
+}
+
+.spotify-leander strong,
+.spotify-leander b {
+  color: inherit !important;
+  font: inherit !important;
+}
+
+
+/* ==========================================================
+   CABECERA
+   ========================================================== */
+
+.spotify-leander .spotify-cabecera {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+
+.spotify-leander .spotify-identidad {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 1 auto;
+
+  min-width: 0;
+}
+
+
+.spotify-leander .spotify-kicker {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--rojo) !important;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+.spotify-leander .spotify-identidad h2 {
+  color: #f1eeeb !important;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+
+.spotify-leander .spotify-subtitulo {
+  display: block;
+
+  margin-top: 10px;
+
+  color: var(--gris) !important;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 11px;
+  font-style: italic;
+
+  line-height: 1.5;
+}
+
+
+/* insignia derecha */
+
+.spotify-leander .spotify-marca {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  flex: 0 0 auto;
+
+  gap: 7px;
+
+  padding-left: 22px;
+
+  border-left: 1px solid var(--linea);
+}
+
+
+.spotify-leander .spotify-cruz {
+  display: block;
+
+  color: var(--rojo) !important;
+
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+
+  line-height: .8;
+}
+
+
+.spotify-leander .spotify-marca > span:last-child {
+  color: var(--dorado) !important;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   DIVISOR / ECUALIZADOR
+   ========================================================== */
+
+.spotify-leander .spotify-linea {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-bottom: 18px;
+}
+
+
+.spotify-leander .spotify-linea > span {
+  display: block;
+
+  flex: 1 1 auto;
+
+  height: 1px;
+
+  background: var(--linea);
+}
+
+
+.spotify-leander .spotify-linea > span:first-child {
+  flex: 0 0 55px;
+
+  background: var(--rojo);
+}
+
+
+/* mini ecualizador */
+
+.spotify-leander .spotify-barras {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  width: 35px;
+  height: 18px;
+}
+
+
+.spotify-leander .spotify-barras i {
+  display: block;
+
+  width: 2px;
+
+  background: var(--rojo);
+
+  animation: leanderSound 1s ease-in-out infinite alternate;
+}
+
+
+.spotify-leander .spotify-barras i:nth-child(1) {
+  height: 6px;
+  animation-delay: .1s;
+}
+
+.spotify-leander .spotify-barras i:nth-child(2) {
+  height: 13px;
+  animation-delay: .35s;
+}
+
+.spotify-leander .spotify-barras i:nth-child(3) {
+  height: 9px;
+  animation-delay: .2s;
+}
+
+.spotify-leander .spotify-barras i:nth-child(4) {
+  height: 16px;
+  animation-delay: .5s;
+}
+
+.spotify-leander .spotify-barras i:nth-child(5) {
+  height: 7px;
+  animation-delay: .25s;
+}
+
+
+@keyframes leanderSound {
+  from {
+    transform: scaleY(.5);
+    opacity: .45;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+
+/* ==========================================================
+   REPRODUCTOR
+   ========================================================== */
+
+.spotify-leander .spotify-player {
+  position: relative;
+
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+
+  padding: 14px;
+
+  background: var(--negro-2);
+
+  border: 1px solid #1d1d1d;
+  border-left: 3px solid var(--rojo);
+}
+
+
+/* texto vertical */
+
+.spotify-leander .spotify-lateral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  width: 28px;
+
+  margin-right: 12px;
+
+  color: #554f4c !important;
+
+  font-size: 6px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+}
+
+
+/* iframe */
+
+.spotify-leander .spotify-iframe {
+  position: relative;
+
+  flex: 1 1 auto;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+
+.spotify-leander .spotify-iframe iframe {
+  display: block;
+
+  width: 100% !important;
+  height: 352px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  background: #000;
+}
+
+
+/* pequeña marca de esquina */
+
+.spotify-leander .spotify-iframe::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 34px;
+  height: 3px;
+
+  background: var(--rojo);
+
+  pointer-events: none;
+}
+
+
+/* ==========================================================
+   PIE
+   ========================================================== */
+
+.spotify-leander .spotify-footer {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-top: 18px;
+}
+
+
+.spotify-leander .spotify-footer-num {
+  color: var(--rojo) !important;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.spotify-leander .spotify-footer-text {
+  flex: 1 1 auto;
+
+  color: #625d59 !important;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+.spotify-leander .spotify-footer-icon {
+  color: var(--dorado) !important;
+
+  font-size: 9px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  .spotify-leander {
+    padding: 18px;
+  }
+
+
+  .spotify-leander .spotify-cabecera {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .spotify-leander .spotify-identidad h2 {
+    font-size: 26px;
+  }
+
+
+  .spotify-leander .spotify-marca {
+    align-items: flex-start;
+
+    padding: 0 0 0 12px;
+
+    border-left: 2px solid var(--rojo);
+  }
+
+
+  .spotify-leander .spotify-player {
+    padding: 10px;
+  }
+
+
+  .spotify-leander .spotify-lateral {
+    display: none
+  }
+
+
+  .spotify-leander .spotify-iframe iframe {
+    height: 352px;
+  }
+
+}
