@@ -1,0 +1,340 @@
+body{
+  background: #101010
+}
+
+
+/* ==========================================================
+   RELACIONES — LEANDER
+   ========================================================== */
+
+.relaciones-leander {
+  --negro: #080808;
+  --negro-2: #0d0d0d;
+  --negro-3: #121212;
+
+  --blanco: #e8e4df;
+  --gris: #7a7470;
+  --gris-2: #a39b95;
+
+  --linea: #202020;
+  --linea-2: #2a2a2a;
+
+  --rojo: #960101;
+  --dorado: #dd9a3c;
+
+  width: 100%;
+  max-width: 1080px;
+  margin: 30px auto;
+  padding: 18px;
+  box-sizing: border-box;
+
+  background: var(--negro);
+  border: 1px solid #181818;
+
+  color: var(--blanco);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+}
+
+
+/* ==========================================================
+   ANULACIONES
+   ========================================================== */
+
+.relaciones-leander,
+.relaciones-leander * {
+  box-sizing: border-box;
+}
+
+.relaciones-leander br {
+  display: none !important;
+}
+
+.relaciones-leander h1,
+.relaciones-leander h2,
+.relaciones-leander h3,
+.relaciones-leander p {
+  margin: 0;
+  padding: 0;
+}
+
+.relaciones-leander a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.relaciones-leander strong,
+.relaciones-leander b {
+  color: inherit !important;
+  font: inherit !important;
+}
+
+
+/* ==========================================================
+   SECCIONES
+   ========================================================== */
+
+.relaciones-leander .rel-seccion {
+  width: 100%;
+  margin: 0 0 40px;
+}
+
+.relaciones-leander .rel-seccion:last-child {
+  margin-bottom: 0;
+}
+
+.relaciones-leander .rel-seccion-titulo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid var(--linea-2);
+}
+
+.relaciones-leander .rel-numero {
+  display: block;
+
+  color: var(--rojo) !important;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.relaciones-leander .rel-seccion-titulo h2 {
+  color: #f1eeeb !important;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+
+/* ==========================================================
+   GRID FLEX
+   ========================================================== */
+
+.relaciones-leander .rel-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  width: 100%;
+}
+
+
+/* ==========================================================
+   TARJETA
+   ========================================================== */
+
+.relaciones-leander .rel-card {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  flex: 1 1 calc(25% - 12px);
+
+  min-width: 220px;
+  max-width: calc(25% - 12px);
+  height: 330px;
+
+  overflow: hidden;
+
+  background-color: #0a0a0a;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: 1px solid #1d1d1d;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+.relaciones-leander .rel-card:hover {
+  transform: translateY(-4px);
+  border-color: #3a2323;
+  box-shadow: 0 0 0 1px rgba(150,1,1,.12);
+}
+
+
+/* overlay oscuro */
+
+.relaciones-leander .rel-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(to top, rgba(8,8,8,.94) 0%, rgba(8,8,8,.78) 38%, rgba(8,8,8,.52) 64%, rgba(8,8,8,.36) 100%);
+}
+
+
+/* contenido */
+
+.relaciones-leander .rel-contenido {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+
+  padding: 18px 16px 16px;
+}
+
+.relaciones-leander .rel-simbolo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin: 0 0 12px;
+
+  border: 1px solid #4a3131;
+  border-radius: 50%;
+
+  color: var(--rojo) !important;
+  font-size: 12px;
+  line-height: 1;
+
+  background: rgba(10,10,10,.55);
+
+  transition:
+    color .25s ease,
+    border-color .25s ease,
+    background .25s ease;
+}
+
+.relaciones-leander .rel-card:hover .rel-simbolo {
+  color: var(--dorado) !important;
+  border-color: var(--rojo);
+  background: rgba(150,1,1,.10);
+}
+
+.relaciones-leander .rel-nombre {
+  display: block;
+
+  width: 100%;
+
+  color: #f1ede8 !important;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.relaciones-leander .rel-subtitulo {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 7px;
+
+  color: var(--gris-2) !important;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* etiquetas */
+
+.relaciones-leander .rel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  width: 100%;
+
+  margin-top: 14px;
+}
+
+.relaciones-leander .rel-tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 24px;
+  padding: 5px 10px;
+
+  background: rgba(13,13,13,.92);
+  border: 1px solid #2c2323;
+  border-radius: 999px;
+
+  color: #ddd7d2 !important;
+
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition:
+    border-color .25s ease,
+    color .25s ease,
+    background .25s ease;
+}
+
+.relaciones-leander .rel-card:hover .rel-tags span {
+  border-color: #493232;
+}
+
+.relaciones-leander .rel-tags span:hover {
+  color: var(--dorado) !important;
+  border-color: var(--rojo);
+  background: rgba(150,1,1,.10);
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 980px) {
+  .relaciones-leander .rel-card {
+    flex: 1 1 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 600px) {
+  .relaciones-leander {
+    padding: 12px;
+  }
+
+  .relaciones-leander .rel-seccion-titulo h2 {
+    font-size: 24px;
+  }
+
+  .relaciones-leander .rel-grid {
+    gap: 12px;
+  }
+
+  .relaciones-leander .rel-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 320px;
+  }
+
+  .relaciones-leander .rel-nombre {
+    font-size: 20px;
+  }
+}
