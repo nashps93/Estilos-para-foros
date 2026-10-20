@@ -38,9 +38,9 @@
   background-image:url('https://imgur.com/oUU9VDR.jpg');
 
   filter:
-    brightness(.76)
+    brightness(.85)
     contrast(1.05)
-    saturate(.72);
+    saturate(.95);
 
   transition:filter .35s ease;
 }
