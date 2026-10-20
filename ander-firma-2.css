@@ -14,11 +14,16 @@
   color:var(--ivory);
 }
 
+
 /* ─────────────────────
    CAPAS
 ───────────────────── */
 
-.sm-photo,.sm-haunt,.sm-glitch,.sm-scan,.sm-shade{
+.sm-photo,
+.sm-haunt,
+.sm-glitch,
+.sm-scan,
+.sm-shade{
   position:absolute;
   inset:0;
   background-position:center 18%;
@@ -26,18 +31,38 @@
   background-repeat:no-repeat;
 }
 
+
+/* imagen principal */
+
 .sm-photo{
   background-image:url('https://i.imgur.com/DKr9nL7.jpg');
-  filter:brightness(.76) contrast(1.05) saturate(.72);
+
+  filter:
+    brightness(.76)
+    contrast(1.05)
+    saturate(.72);
+
   transition:filter .35s ease;
 }
 
+
+/* segunda imagen */
+
 .sm-haunt{
   background-image:url('https://i.imgur.com/u2nOrbp.jpg');
+
   opacity:0;
-  filter:brightness(.57) contrast(1.2) saturate(.62);
+
+  filter:
+    brightness(.57)
+    contrast(1.2)
+    saturate(.62);
+
   pointer-events:none;
 }
+
+
+/* capas de glitch */
 
 .sm-glitch{
   opacity:0;
@@ -46,18 +71,32 @@
 
 .sm-glitch-a{
   background-image:url('https://i.imgur.com/DKr9nL7.jpg');
+
   mix-blend-mode:screen;
-  filter:brightness(.68) contrast(1.3) saturate(.75);
+
+  filter:
+    brightness(.68)
+    contrast(1.3)
+    saturate(.75);
 }
 
 .sm-glitch-b{
   background-image:url('https://i.imgur.com/u2nOrbp.jpg');
+
   mix-blend-mode:lighten;
-  filter:brightness(.46) contrast(1.35) grayscale(.2);
+
+  filter:
+    brightness(.46)
+    contrast(1.35)
+    grayscale(.2);
 }
+
+
+/* scanlines */
 
 .sm-scan{
   opacity:0;
+
   background:
     repeating-linear-gradient(
       180deg,
@@ -66,23 +105,46 @@
       transparent 1px,
       transparent 4px
     );
+
   pointer-events:none;
 }
 
+
+/* sombreado */
+
 .sm-shade{
   background:
-    radial-gradient(circle at 50% 52%, rgba(5,5,5,.02), rgba(5,5,5,.10) 47%, rgba(5,5,5,.50) 100%),
-    linear-gradient(0deg, rgba(5,5,5,.43), transparent 52%);
+    radial-gradient(
+      circle at 50% 52%,
+      rgba(5,5,5,.02),
+      rgba(5,5,5,.10) 47%,
+      rgba(5,5,5,.50) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(5,5,5,.43),
+      transparent 52%
+    );
 }
+
+
+/* marco */
 
 .sm-frame{
   position:absolute;
   inset:11px;
+
   z-index:5;
-  border:1px solid rgba(237,230,220,.12);
+
+  border:
+    1px solid
+    rgba(237,230,220,.12);
+
   pointer-events:none;
+
   transition:.5s ease;
 }
+
 
 /* ─────────────────────
    TEXTO SUPERIOR
@@ -90,255 +152,595 @@
 
 .sm-meta{
   position:absolute;
-  top:124px;
+
+  top:135px;
   left:0;
   right:0;
+
   z-index:7;
+
   display:flex;
   justify-content:center;
   align-items:center;
+
   gap:14px;
+
   white-space:nowrap;
-  font:500 8px "Cormorant Garamond",serif;
+
+  font:
+    500 8px
+    "Cormorant Garamond",
+    serif;
+
   letter-spacing:3.2px;
-  color:rgba(237,230,220,.74);
+
+  color:
+    rgba(237,230,220,.74);
 }
 
-.sm-meta i{
-  color:var(--gold);
-  font-style:normal;
+
+/* evita estilos globales del foro */
+
+.sm-meta > span{
+  color:inherit !important;
+  background:none !important;
+  text-shadow:none !important;
 }
+
+
+/* cruz dorada */
+
+.sm-meta .sm-cross{
+  color:var(--gold) !important;
+  background:none !important;
+  font-style:normal !important;
+  text-shadow:none !important;
+}
+
 
 /* ─────────────────────
-   BLOQUE TIPOGRÁFICO
+   BLOQUE CENTRAL
 ───────────────────── */
 
 .sm-type{
   position:absolute;
+
   left:50%;
   top:67%;
+
   width:320px;
   height:90px;
-  transform:translate(-50%,-50%);
+
+  transform:
+    translate(-50%,-50%);
+
   z-index:7;
 }
+
+
+/* ─────────────────────
+   MEMENTO
+───────────────────── */
 
 .sm-memento{
   position:absolute;
+
   left:50%;
   top:30px;
+
   width:100%;
-  transform:translate(-50%,-50%);
+
+  transform:
+    translate(-50%,-50%);
+
   display:flex;
   justify-content:center;
+
   white-space:nowrap;
-  font:500 46px/.86 "Bodoni Moda",serif;
+
+  font:
+    500 46px/.86
+    "Bodoni Moda",
+    serif;
+
   letter-spacing:-1px;
+
   color:var(--ivory);
+
   opacity:.87;
-  filter:blur(.55px);
+
+  filter:
+    blur(.55px);
+
   transition:.5s ease;
 }
 
-.fx-focus b{
+
+/* letras individuales:
+   blindadas contra estilos globales */
+
+.fx-focus span{
   display:inline-block;
-  font-weight:inherit;
-  animation:fx-focus 3.1s ease-in-out infinite;
-  animation-delay:calc(var(--i) * .16s);
+
+  color:inherit !important;
+  background:none !important;
+  font-weight:inherit !important;
+  font-style:normal !important;
+  text-shadow:none !important;
+
+  animation:
+    fx-focus
+    3.1s
+    ease-in-out
+    infinite;
+
+  animation-delay:
+    calc(var(--i) * .16s);
+
   animation-play-state:paused;
 }
+
+
+/* ─────────────────────
+   MORI
+───────────────────── */
 
 .sm-mori-wrap{
   position:absolute;
+
   left:50%;
-  top:33px;
+  top:30px;
+
   z-index:9;
-  transform:translate(-50%,-50%);
+
+  transform:
+    translate(-50%,-50%);
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   gap:11px;
+
   width:190px;
 }
 
-.sm-mori-wrap span{
+
+.sm-mori-wrap > span{
   flex:1;
+
   height:1px;
+
   background:var(--gold);
+
   opacity:.78;
+
   transition:.5s ease;
 }
 
+
 .fx-jitter{
+  background:none !important;
+
+  padding:0;
+
   white-space:nowrap;
-  color:var(--gold);
-  font:700 24px/.9 "Cinzel",serif;
+
+  color:var(--gold) !important;
+
+  font:
+    700 24px/.9
+    "Cinzel",
+    serif;
+
   letter-spacing:4px;
-  animation:fx-jitter 2.4s steps(1) infinite;
+
+  text-shadow:none !important;
+
+  animation:
+    fx-jitter
+    2.4s
+    steps(1)
+    infinite;
+
   animation-play-state:paused;
 }
 
+
+/* ─────────────────────
+   FRASE INFERIOR
+───────────────────── */
+
 .sm-bottom{
   position:absolute;
+
   left:50%;
   bottom:20px;
-  transform:translateX(-50%);
+
+  transform:
+    translateX(-50%);
+
   z-index:7;
+
   white-space:nowrap;
-  font:500 8px "Cormorant Garamond",serif;
+
+  font:
+    500 8px
+    "Cormorant Garamond",
+    serif;
+
   letter-spacing:6px;
-  color:rgba(237,230,220,.58);
+
+  color:
+    rgba(237,230,220,.58);
+
   transition:.5s ease;
 }
+
 
 /* ─────────────────────
    HOVER
 ───────────────────── */
 
-.sloane-mori:hover .fx-focus b,
+.sloane-mori:hover .fx-focus span,
 .sloane-mori:hover .fx-jitter{
   animation-play-state:running;
 }
 
+
 .sloane-mori:hover .sm-photo{
-  filter:brightness(.48) contrast(1.12) saturate(.52);
+  filter:
+    brightness(.48)
+    contrast(1.12)
+    saturate(.52);
 }
 
-/* imagen 2:
-   entra glitcheando y luego se queda */
+
+/* la segunda imagen entra mediante glitch
+   y luego permanece */
+
 .sloane-mori:hover .sm-haunt{
   animation:
-    sm-haunt-on .7s steps(1,end) forwards,
-    sm-haunt-hold 2.2s steps(1,end) .7s infinite;
+    sm-haunt-on
+    .7s
+    steps(1,end)
+    forwards,
+
+    sm-haunt-hold
+    2.2s
+    steps(1,end)
+    .7s
+    infinite;
 }
 
-/* glitches de soporte */
+
 .sloane-mori:hover .sm-glitch-a{
-  animation:sm-glitch-a 2.2s steps(1) infinite;
+  animation:
+    sm-glitch-a
+    2.2s
+    steps(1)
+    infinite;
 }
+
 
 .sloane-mori:hover .sm-glitch-b{
-  animation:sm-glitch-b 2.2s steps(1) infinite;
+  animation:
+    sm-glitch-b
+    2.2s
+    steps(1)
+    infinite;
 }
 
+
 .sloane-mori:hover .sm-scan{
-  animation:sm-scan 2.2s steps(1) infinite;
+  animation:
+    sm-scan
+    2.2s
+    steps(1)
+    infinite;
 }
+
 
 .sloane-mori:hover .sm-memento{
   opacity:.95;
-  filter:blur(.9px);
+
+  filter:
+    blur(.9px);
+
   letter-spacing:0;
 }
 
-.sloane-mori:hover .sm-mori-wrap span{
+
+.sloane-mori:hover
+.sm-mori-wrap > span{
   flex:1.3;
   opacity:1;
 }
 
-.sloane-mori:hover .sm-bottom{
+
+.sloane-mori:hover
+.sm-bottom{
   letter-spacing:8px;
-  color:rgba(237,230,220,.8);
+
+  color:
+    rgba(237,230,220,.80);
 }
 
-.sloane-mori:hover .sm-frame{
+
+.sloane-mori:hover
+.sm-frame{
   inset:15px;
-  border-color:rgba(223,173,61,.2);
+
+  border-color:
+    rgba(223,173,61,.20);
 }
+
 
 /* ─────────────────────
    ENTRADA GLITCHEADA
 ───────────────────── */
 
 @keyframes sm-haunt-on{
-  0%   { opacity:0;   }
-  10%  { opacity:.08; }
-  18%  { opacity:.28; }
-  26%  { opacity:.10; }
-  36%  { opacity:.46; }
-  46%  { opacity:.18; }
-  58%  { opacity:.66; }
-  72%  { opacity:.34; }
-  84%  { opacity:.84; }
-  100% { opacity:.90; }
+
+  0%{
+    opacity:0;
+  }
+
+  10%{
+    opacity:.08;
+  }
+
+  18%{
+    opacity:.28;
+  }
+
+  26%{
+    opacity:.10;
+  }
+
+  36%{
+    opacity:.46;
+  }
+
+  46%{
+    opacity:.18;
+  }
+
+  58%{
+    opacity:.66;
+  }
+
+  72%{
+    opacity:.34;
+  }
+
+  84%{
+    opacity:.84;
+  }
+
+  100%{
+    opacity:.90;
+  }
+
 }
 
-/* se mantiene en la segunda imagen,
-   con pequeñas oscilaciones */
+
+/* imagen secundaria ya instalada */
+
 @keyframes sm-haunt-hold{
-  0%,100% { opacity:.90; }
-  18%     { opacity:.82; }
-  22%     { opacity:.88; }
-  48%     { opacity:.84; }
-  54%     { opacity:.92; }
-  76%     { opacity:.86; }
-  82%     { opacity:.90; }
+
+  0%,100%{
+    opacity:.90;
+  }
+
+  18%{
+    opacity:.82;
+  }
+
+  22%{
+    opacity:.88;
+  }
+
+  48%{
+    opacity:.84;
+  }
+
+  54%{
+    opacity:.92;
+  }
+
+  76%{
+    opacity:.86;
+  }
+
+  82%{
+    opacity:.90;
+  }
+
 }
+
 
 /* ─────────────────────
-   GLITCH CAPA A
+   GLITCH A
 ───────────────────── */
 
 @keyframes sm-glitch-a{
-  0%,18%,100%{ opacity:0; transform:translateX(0); }
-  20%{ opacity:.18; transform:translateX(-4px); }
-  22%{ opacity:.30; transform:translateX(3px); }
-  24%{ opacity:.10; transform:translateX(-2px); }
-  48%{ opacity:.24; transform:translateX(4px); }
-  50%{ opacity:.12; transform:translateX(-3px); }
-  74%{ opacity:.20; transform:translateX(-4px); }
-  76%{ opacity:.10; transform:translateX(3px); }
+
+  0%,18%,100%{
+    opacity:0;
+    transform:translateX(0);
+  }
+
+  20%{
+    opacity:.18;
+    transform:translateX(-4px);
+  }
+
+  22%{
+    opacity:.30;
+    transform:translateX(3px);
+  }
+
+  24%{
+    opacity:.10;
+    transform:translateX(-2px);
+  }
+
+  48%{
+    opacity:.24;
+    transform:translateX(4px);
+  }
+
+  50%{
+    opacity:.12;
+    transform:translateX(-3px);
+  }
+
+  74%{
+    opacity:.20;
+    transform:translateX(-4px);
+  }
+
+  76%{
+    opacity:.10;
+    transform:translateX(3px);
+  }
+
 }
 
+
 /* ─────────────────────
-   GLITCH CAPA B
+   GLITCH B
 ───────────────────── */
 
 @keyframes sm-glitch-b{
-  0%,22%,100%{ opacity:0; transform:translateX(0); }
-  24%{ opacity:.16; transform:translateX(3px); }
-  26%{ opacity:.08; transform:translateX(-2px); }
-  52%{ opacity:.20; transform:translateX(-4px); }
-  55%{ opacity:.10; transform:translateX(3px); }
-  78%{ opacity:.16; transform:translateX(4px); }
+
+  0%,22%,100%{
+    opacity:0;
+    transform:translateX(0);
+  }
+
+  24%{
+    opacity:.16;
+    transform:translateX(3px);
+  }
+
+  26%{
+    opacity:.08;
+    transform:translateX(-2px);
+  }
+
+  52%{
+    opacity:.20;
+    transform:translateX(-4px);
+  }
+
+  55%{
+    opacity:.10;
+    transform:translateX(3px);
+  }
+
+  78%{
+    opacity:.16;
+    transform:translateX(4px);
+  }
+
 }
+
 
 /* ─────────────────────
    SCAN
 ───────────────────── */
 
 @keyframes sm-scan{
-  0%,18%,100%{ opacity:0; }
-  21%,25%,49%,53%,75%,79%{ opacity:.10; }
+
+  0%,18%,100%{
+    opacity:0;
+  }
+
+  21%,25%,49%,53%,75%,79%{
+    opacity:.10;
+  }
+
 }
 
+
 /* ─────────────────────
-   TEXTO
+   LENS DRIFT
 ───────────────────── */
 
 @keyframes fx-focus{
-  0%,100%{ filter:blur(0); opacity:1; }
-  50%{ filter:blur(3.4px); opacity:.62; }
+
+  0%,100%{
+    filter:blur(0);
+    opacity:1;
+  }
+
+  50%{
+    filter:blur(3.4px);
+    opacity:.62;
+  }
+
 }
 
+
+/* ─────────────────────
+   JITTER MORI
+───────────────────── */
+
 @keyframes fx-jitter{
-  0%,7%,15%,55%,100%{ transform:none; opacity:1; }
-  8%{ transform:skewX(-7deg) translateX(-2px); }
-  10%{ transform:skewX(5deg) translateX(2px); }
-  12%{ transform:translateY(-2px); opacity:.75; }
-  46%{ transform:skewX(4deg); }
-  48%{ transform:skewX(-3deg) translateY(1px); opacity:.84; }
+
+  0%,7%,15%,55%,100%{
+    transform:none;
+    opacity:1;
+  }
+
+  8%{
+    transform:
+      skewX(-7deg)
+      translateX(-2px);
+  }
+
+  10%{
+    transform:
+      skewX(5deg)
+      translateX(2px);
+  }
+
+  12%{
+    transform:
+      translateY(-2px);
+
+    opacity:.75;
+  }
+
+  46%{
+    transform:
+      skewX(4deg);
+  }
+
+  48%{
+    transform:
+      skewX(-3deg)
+      translateY(1px);
+
+    opacity:.84;
+  }
+
 }
+
 
 /* ─────────────────────
    ACCESIBILIDAD
 ───────────────────── */
 
 @media (prefers-reduced-motion:reduce){
+
   .sloane-mori *,
   .sloane-mori *:before,
   .sloane-mori *:after{
     animation:none !important;
     transition:none !important;
   }
+
 }
